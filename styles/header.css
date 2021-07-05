@@ -1,0 +1,320 @@
+.header{
+    background: linear-gradient(0deg, #651FFF -1.81%, #FF5900 33.5%, rgba(253, 191, 15, 0.3) 84.16%, #FFFFFF 145.56%),
+    linear-gradient(0deg, #FDBF0F, #FDBF0F);
+    position: relative;
+    overflow: hidden;
+}
+.header::before{
+    content: '';
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 59.03%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 20;
+}
+.slogan::after{
+    content: '';
+    background: url(../img/кольца.png) no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 720px;
+    z-index: 10;
+    left: -4%;
+    bottom: 0;
+}
+.header__container-background{
+    position: relative;
+}
+.header__container-background:before{
+    content: '';
+    background: url(../img/devushka.png) no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 550px;
+    width: 822px;
+    bottom: 0;
+    right: 18%;
+    z-index: 100;
+}
+.header__container-background::after{
+    content: '';
+    background: url(../img/mishen_red.svg) no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    height: 625px;
+    width: 625px;
+    top:7%;
+    right: -14%;
+    z-index: 50;
+}
+.header__title{
+    transition: color .5s;
+    transition-delay: .3s;
+}
+.nav, .header__title, .slogan__logo, .slogan__top-row, .slogan__bottom-row, .slogan__btn, .contacts{
+    position: relative;
+    z-index: 100;
+}
+.nav{
+    z-index: 120;
+}
+.header__title{
+    text-transform: uppercase;
+    margin: 14px 0 0 0;
+    font-size: 3rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+.drop__btn{
+    display: none;
+  }
+.nav{
+    flex: 1;
+}
+.nav-list{
+    margin: 24px 0 0 72px;
+    padding: 0;
+    justify-content: space-between;
+    list-style: none;
+}
+.nav-list__link{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    transition: color .5s;
+    transition-delay: .3s;
+}
+.nav-list__link:hover, .contacts__link:hover .icon-phone, .icon-phone:focus, .header__title:hover, .header__title:focus, .nav-list__link:focus, .contacts__link:hover, .contacts__link:focus, .footer__title:focus, .footer__title:hover{
+    color:#FF8C00;
+    transition:  .5s ease-out;
+  }
+  .nav-list__link::after, .header__title::after, .footer__title::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FF8C00;
+    content: '';
+    transition: .5s ease-out;
+  }
+  .nav-list__link:hover::after, .nav-list__link:focus::after, .header__title:hover::after, .header__title:focus::after, .footer__title:focus:after, .footer__title:hover::after{
+    width: 100%;
+  }
+.contacts{
+    margin-top: 20px;
+    justify-content: flex-end;
+    list-style: none;
+}
+.contacts__item{
+    color: #000;
+    font-size: .9rem;
+    font-weight: 400;
+    margin-left: 70px;
+}
+.contacts__link{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    transition: color .5s;
+    transition-delay: .3s;
+}
+.contacts__link--tel{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.contacts__link--mail{
+    font-size: .9rem;
+    margin-top: 8px;
+    font-weight: 400;
+    margin-left: 42px;
+}
+.contacts__icon{
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+.icon-phone {
+    font-size: 24px;
+    transition: color .5s;
+    transition-delay: .3s;
+    margin-right: 6px;
+}
+.slogan{
+    max-width: 455px;
+    padding: 82px 0 165px 0;
+}
+.slogan__logo{
+    height: 150px;
+    background-image: url(../img/Aliexpress_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+.slogan__top-row{
+    margin: 0 15px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 3.37rem;
+    font-weight: 700;
+}
+.slogan__bottom-row{
+    width: 95%;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    font-size: 1.37rem;
+    line-height: 2rem;
+}
+.slogan__btn{
+    padding: 18px 26px;
+    font-size: 1.5rem;
+}
+
+
+@media (max-width: 1200px){
+    .nav-list{
+        display: none;
+    }
+    .drop__btn{
+        position: fixed;
+        opacity: .8;
+        top: 22px;
+        right: 8px;
+        display: block; 
+        margin-left: auto; 
+        cursor: pointer;
+        padding: 10px;
+    }
+    .drop__btn-line,
+    .drop__btn-line::after,
+    .drop__btn-line::before{
+        position: relative;
+        width: 26px;
+        height: 4px;
+        background-color: #000;
+        transition: 0.5s;
+    }
+    .drop__btn-line::after,
+    .drop__btn-line::before{
+        content: "";
+        position: absolute;
+        top: 9px;
+    }
+    .drop__btn-line::before{
+        top: auto;
+        bottom: 9px;
+    }
+    .drop__btn.open {
+        z-index: 10000;
+        position: fixed;
+        top: 22px;
+        right: 8px;
+    }
+    .drop__btn.open .drop__btn-line:before {
+        transform: rotate(45deg);
+        top: 0;
+        background-color: #fff;
+    }
+    .drop__btn.open .drop__btn-line:after {
+        transform: rotate(-45deg);
+        top: 0;
+        background-color: #fff;
+    }
+    @keyframes menu {
+        0% {transform: translatex(-100%);}
+        100{transform: translatex(0);}
+    }
+    .nav-list{
+        animation: menu .7s both;
+    }
+    .drop__content{display: none;}
+    .drop{display: flex;}
+    .open~.nav-list{
+        display: block;
+        padding: 50px 0;
+        text-align: center;
+        width:100%;
+        border: 1px solid #FFf;
+        border-radius: 0 0 4% 4%;
+        background: rgba(0,0,0, .9);
+        position: fixed;
+        top: -25px;
+        right: 0;
+    }
+    .nav-list__item{
+        padding: 6px 0;
+    }
+    .nav-list__link{
+        color: #FFF;
+        font-size: 1.1em;
+        text-transform: uppercase;
+    }
+
+    .contacts{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .contacts__item{
+        margin: 8px 0;
+    }
+    .contacts__item--adres{
+        margin-right: 8px;
+    }
+    .slogan::after{
+        content: none;
+    }
+    .contacts__btn{
+        margin-right: 26px;
+    }
+}
+
+@media (max-width:1020px) {
+    .slogan__bottom-row{
+        background: rgba(255,140,0, .4);
+        border-radius: 8px;
+        color: #fff;
+        padding: 16px;
+    }
+    .header__container-background::after {
+        right: -25%;
+    }
+}
+
+@media (max-width:760px) {
+    .slogan{
+        padding: 20px 0 56px 0;
+    }
+    .header__container-background::after{
+        top: 16%;
+        right: -45%;
+    } 
+}
+
+@media (max-width:480px) {
+    .header__title{
+        font-size: 2.8rem;
+    }
+    .header__container-background:before {
+        content: none;
+    }
+    .header__container-background::after{
+        content: none;
+    } 
+    .slogan__top-row{
+        margin: 0;
+    }
+    .slogan__bottom-row{
+        background: none;
+        padding: 0;
+    }
+    .slogan__btn{
+        padding: 10px 20px;
+    }
+}

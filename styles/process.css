@@ -1,0 +1,221 @@
+.process{
+    padding: 70px 0 0 0;
+    background: #F5F5F5;
+}
+.process__block{
+    background-image: url(../img/chels\ misheniu.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    padding-bottom: 62px;
+}
+.process__list:hover{
+	transform: rotate(80deg) ;
+	transition: 1s linear;
+}
+.process__list:hover .process__list-text{
+    transform: rotate(-80deg) ;
+	transition: 1s linear;
+}
+.process__list:hover .process__list-num{
+    transform: rotate(-80deg);
+	transition: 1s linear;
+}
+.process__list:hover .process__list-item:nth-child(1) .process__list-text{
+    transform: translate(155px, 180px) rotate(-80deg);
+    transition: 1s linear;
+}
+.process__list:hover .process__list-item:nth-child(2) .process__list-text{
+    transform: translate(216px, -180px) rotate(-80deg);
+    text-align: left;
+    transition: 1s linear;
+}
+.process__list:hover .process__list-item:nth-child(3) .process__list-text{
+    transform: translate(-151px, -180px) rotate(-80deg);
+    transition: 1s linear;
+}
+.process__list:hover .process__list-item:nth-child(4) .process__list-text{
+    transform: translate(-215px, 180px) rotate(-80deg);
+    text-align: right;
+    transition: 1s linear;
+}
+.process__list{
+    list-style: none;
+    width: 520px;
+    height: 520px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    transition: 1s;
+}
+.process__list-item{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1%;
+    top: 68%;
+}
+.process__list-num-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FDBF0F;
+    box-sizing: border-box;
+    height: 3.8rem;
+    width: 3.8rem;
+    border-radius: 50%;
+    margin: 0 16px;
+}
+.process__list-num{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 4px solid #FFFFFF;
+    border-radius: 50%;
+    background: #651FFF;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    font-weight: 700;
+    width: 3rem;
+    height: 3rem;
+    transition: 1s;
+}
+.process__list-text{
+    position: absolute;
+    right: 100%;
+    display: block;
+    width: 280px;
+    text-align: right;
+    transition: 1s;
+}
+.process__list-item:nth-child(2){
+    top: 18%;
+    left: 2%;
+}
+.process__list-item:nth-child(3){
+    top: -2%;
+    left: 58%;
+}
+.process__list-item:nth-child(4){
+    top: 41%;
+    left: 88%;
+}
+.process__list-item:nth-child(3) .process__list-text, 
+.process__list-item:nth-child(4) .process__list-text{
+    text-align: left;
+    right: auto;
+    left: 100%;
+}
+
+@media (max-width:1280px){
+    .process__block {
+        background-size: 30vw;
+    }
+    .process__list {
+        width: 30vw;
+        height: 30vw;
+    }
+    .process__list-text {
+        width: 30vw;
+        font-size: 14px;
+    }
+    .process__list-num-background {
+        width: 4vw;
+        height: 4vw;
+    }
+    .process__list-num{
+        font-size: 2vw;
+        width: 3vw;
+        height: 3vw;
+    }
+    .process__list-item:nth-child(4){
+        top: 41%;
+        left: calc(28vw + 5px);
+    }
+    .process__list-num-background{
+        margin: 0 12px;
+    }
+    .process__list:hover{
+        transform: none ;
+    }
+    .process__list:hover .process__list-text{
+        transform: none;
+    }
+    .process__list:hover .process__list-num{
+        transform: none;
+    }
+    .process__list:hover .process__list-item:nth-child(1) .process__list-text{
+        transform: none;
+    }
+    .process__list:hover .process__list-item:nth-child(2) .process__list-text{
+        transform: none;
+        text-align: right;
+    }
+    .process__list:hover .process__list-item:nth-child(3) .process__list-text{
+        transform: none;
+    }
+    .process__list:hover .process__list-item:nth-child(4) .process__list-text{
+        transform: none;
+        text-align: left;
+    }
+}
+
+
+@media (max-width:760px) {
+    .process__block{
+        background-image: none;
+        padding-bottom: 62px;
+        margin-bottom: 30px;
+    }
+    .process__list{
+        flex-direction: column;
+        align-items: flex-start;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+    .process__list-item{
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: auto;
+        top: auto;
+        margin-bottom: 24px;
+    }
+    .process__list-text{
+        position: relative;
+        right: 0;
+        text-align: left;
+        width: auto;
+    }
+    .process__list-item:nth-child(2){
+        top: 0;
+        left: 0;
+    }
+    .process__list-item:nth-child(3){
+        top: 0;
+        left: 0;
+    }
+    .process__list-item:nth-child(4){
+        top: 0;
+        left: 0;
+    }
+    .process__list-item:nth-child(3) .process__list-text, 
+    .process__list-item:nth-child(4) .process__list-text{
+        text-align: left;
+        right: 0;
+        left: 0;
+    }
+    .process__list-num-background{
+        height: 3rem;
+        width: 3rem;
+        margin: 0 12px 0 0;
+        padding: 5px;
+    }
+    .process__list-num{
+        font-size: 1.3rem;
+        font-weight: 700;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}

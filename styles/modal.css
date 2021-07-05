@@ -1,0 +1,58 @@
+@keyframes modal {
+    
+}
+
+.modal{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: -100;
+    transition: opacity 1s;
+}
+.modal.modal--open{
+    overflow: auto;
+    opacity: 1;
+    visibility: visible;
+    z-index: 200;
+    transition: opacity 1s;
+}
+.modal__content{
+    max-width: 972px;
+    margin: 5% auto;
+    transform: scale(0) rotate(120deg);
+    transition: transform .7s;
+}
+.modal.modal--open .modal__content{
+    transform: scale(1) rotate(0);
+    transition: transform .7s;
+}
+body.modal--open {
+    overflow: hidden;
+}
+.modal__close{
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0, .5);
+    z-index: 200;
+    transition: .3s;
+}
+.btn--modal-window{
+    cursor: pointer;
+}
+.modal__close:hover{
+    color: rgba(0, 0, 0, 1);
+    font-size: 3.2rem;
+    transition: .3s;
+}
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
